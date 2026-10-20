@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fbfaf6">
+    <meta name="description" content="Your FaithConnect account.">
+    <title>Your account | FaithConnect</title>
+    <link rel="stylesheet" href="/src/css/styles.css">
+    <link rel="stylesheet" href="/src/css/auth.css">
+    <script src="/src/js/auth.js" defer></script>
+</head>
+<body class="auth-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header"><nav class="navbar container" aria-label="Main navigation">
+        <a class="brand" href="/" aria-label="FaithConnect home"><span class="brand-symbol" aria-hidden="true">✦</span><span>Faith<span class="brand-accent">Connect</span></span></a>
+        <form class="sign-out-form" action="/api/auth/sign-out" method="post" data-auth-form><button class="text-button" type="submit">Sign out</button></form>
+    </nav></header>
+    <main class="auth-main container" id="main-content" tabindex="-1">
+        <section class="auth-card account-card" aria-labelledby="page-title">
+            <span class="eyebrow">YOUR FAITHCONNECT ACCOUNT</span>
+            <h1 id="page-title">Welcome, <span data-account-name>member</span></h1>
+            <p class="auth-intro">You’re signed in with <strong data-account-email>your verified email</strong>.</p>
+            <div class="account-status"><span class="status-check" aria-hidden="true">✓</span><p>Your email is verified. Account access is active.</p></div>
+            <div class="roadmap-panel">
+                <h2>Your matchmaking profile is not open yet</h2>
+                <p>FaithConnect is preparing private profile and visibility controls. Faith, denomination, location, and matching preferences are not collected on this page.</p>
+            </div>
+            <p class="auth-message" data-form-message role="status" aria-live="polite"></p>
+            <p class="auth-switch"><a href="/">Return to the homepage</a></p>
+        </section>
+    </main>
+    <footer class="auth-footer"><a href="/">FaithConnect</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></footer>
+</body>
+</html>

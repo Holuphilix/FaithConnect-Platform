@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fbfaf6">
+    <meta name="description" content="Sign in to your FaithConnect account.">
+    <title>Sign in | FaithConnect</title>
+    <link rel="stylesheet" href="/src/css/styles.css">
+    <link rel="stylesheet" href="/src/css/auth.css">
+    <script src="/src/js/auth.js" defer></script>
+</head>
+<body class="auth-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header"><nav class="navbar container" aria-label="Main navigation">
+        <a class="brand" href="/" aria-label="FaithConnect home"><span class="brand-symbol" aria-hidden="true">✦</span><span>Faith<span class="brand-accent">Connect</span></span></a>
+        <a class="auth-nav-link" href="/register">Create an account</a>
+    </nav></header>
+    <main class="auth-main container" id="main-content" tabindex="-1">
+        <section class="auth-card auth-card-compact" aria-labelledby="page-title">
+            <span class="eyebrow">WELCOME BACK</span>
+            <h1 id="page-title">Sign in</h1>
+            <p class="auth-intro">Use the email address you registered with.</p>
+            <p class="query-notice" data-query-notice role="status" aria-live="polite"></p>
+            <form data-auth-form action="/api/auth/sign-in" method="post" novalidate>
+                <div class="form-field">
+                    <label for="email">Email address</label>
+                    <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required aria-describedby="email-error">
+                    <span class="field-error" id="email-error" data-error-for="email"></span>
+                </div>
+                <div class="form-field">
+                    <label for="password">Password</label>
+                    <div class="password-field"><input id="password" name="password" type="password" autocomplete="current-password" required aria-describedby="password-error"><button class="password-toggle" type="button" data-password-toggle="password" aria-label="Show password">Show</button></div>
+                    <span class="field-error" id="password-error" data-error-for="password"></span>
+                </div>
+                <p class="auth-alternate-link"><a href="/forgot-password">Forgot your password?</a></p>
+                <p class="auth-message" data-form-message role="status" aria-live="polite"></p>
+                <button class="button auth-submit" type="submit">Sign in</button>
+            </form>
+            <p class="auth-switch">New to FaithConnect? <a href="/register">Create an account</a></p>
+        </section>
+    </main>
+    <footer class="auth-footer"><a href="/">FaithConnect</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></footer>
+</body>
+</html>

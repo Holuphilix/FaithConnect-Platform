@@ -1,0 +1,24 @@
+.DS_Store
+Thumbs.db
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Generated files and dependencies
+node_modules/
+dist/
+build/
+coverage/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+*.py[cod]
+
+# Editor and operating-system files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.log
